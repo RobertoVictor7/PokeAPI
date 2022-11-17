@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokeAPI</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header-area">
+      <h1 class="Title">Pokedex</h1>
+    </header>
+    <section class="pokedex-area">
+      <div class="pokedex">
+        <div class="pokemon-area">
+          <div class="pokemon-display"></div>
+          <p class="poke-name">Pikachu</p>
+          <div class="poke-info">
+            <div class="poke-type">
+              <label>Type:</label>
+            </div>
+
+            <div class="poke-height">
+              <label>Height:</label>
+            </div>
+
+            <div class="poke-weight">
+              <label>Weight:</label>
+            </div>
+            <div class="poke-resume"></div>
+          </div>
+          <div class="search-area">
+            <form action="searchPokemon">
+            <input
+              class="poke-search"
+              type="text"
+              placeholder="Quem é esse Pokemon?"
+            />
+            <button type="submit">Procurar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="/src/script.js"></script>
-</body>
+  </body>
 </html>

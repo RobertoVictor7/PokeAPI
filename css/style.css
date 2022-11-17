@@ -4,6 +4,79 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--monospace);
 }
 
+body {
+    background-color: var(--yellow);
 
+}
+
+.header-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkGrey);
+    color: var(--white);
+    font-size: 2rem;
+    height: 7rem;
+}
+
+.pokedex-area {
+    margin-top: 3rem;
+}
+
+.pokedex {
+    height: 700px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 3rem;
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-area {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: var(--lightYellow);
+}
+
+.pokemon-display {
+    max-width: 200px;
+    margin: 0 auto;
+    min-height: 200px;
+    border: solid 7px var(--grey);
+    margin-top: 1rem;
+}
+
+.poke-name, .search-area {
+   text-align: center;
+   margin-top: 0.875rem;
+   font-size: 1.8rem;
+}
+
+.poke-info {
+    max-width: 350px;
+    margin: 1rem auto 0 auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.poke-height,
+.poke-weight,
+.poke-type {
+    font-size: 1.5rem;
+    grid-column: 1/2;
+}
+
+.poke-resume{
+    border: solid;
+    grid-row: 1/4;
+    grid-column: 2/2;
+}
+
+.poke-search {
+   height: 3rem;
+}
