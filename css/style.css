@@ -127,6 +127,17 @@ body {
   text-align: center;
 }
 
+.poke-search:invalid {
+    animation: shake .3s;
+    border: 2px solid var(--red);
+}
+
+@keyframes shake {
+  25% {transform: translateX(4px)}
+  50% {transform: translateX(-4px)}
+  75% {transform: translateX(4px)}
+}
+
 #search {
   border: none;
   height: auto;
