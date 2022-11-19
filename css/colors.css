@@ -1,12 +1,9 @@
 :root {
     --yellow: #f6bd20;
-    --lightYellow: #fff6a4;
     --lightGrey: #737383;
     --grey: #41414a;
     --darkGrey: #292929;
     --white: #ffffff;
-    --red: #c52018;
-    --lightRed: #e65a41;
-    --blue: #4287f5;    
+    --red: #c52018; 
     --monospace: monospace;
 }

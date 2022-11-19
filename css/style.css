@@ -8,17 +8,11 @@
 }
 
 body {
-  background-color: var(--white);
-}
-
-.header-area {
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: var(--darkGrey);
-  color: var(--white);
-  font-size: 2rem;
-  height: 7rem;
+  justify-content: center;
+  background-color: var(--grey);
 }
 
 .pokedex-area {
@@ -27,19 +21,20 @@ body {
 
 .pokedex {
   height: 500px;
-  width: 420px;
-  margin: 0 auto;
+  width: 360px;
   border-radius: 3rem;
   background-color: var(--red);
+  border: 3px solid var(--lightGrey);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .pokemon-area {
-  min-width: 330px;
+  min-width: 300px;
   min-height: 380px;
-  background-color: var(--blue);
+  background-color: var(--yellow);
+  border: 3px solid var(--lightGrey);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,9 +47,9 @@ body {
   width: 220px;
   height: 70px;
   background-color: var(--darkGrey);
-  border: solid 3px var(--lightGrey);
+  border-top: solid 3px var(--lightGrey);
   top: -76px;
-  left: 50px;
+  left: 38px;
   border-radius: 100% 100% 0 0;
 }
 
@@ -64,10 +59,10 @@ body {
   width: 220px;
   height: 70px;
   background-color: var(--darkGrey);
-  border: solid 3px var(--lightGrey);
+  border-top: solid 3px var(--lightGrey);
   bottom: -76px;
   transform: rotate(180deg);
-  left: 50px;
+  left: 38px;
   border-radius: 100% 100% 0 0;
 }
 
@@ -75,7 +70,7 @@ body {
   min-width: 200px;
   min-height: 130px;
   margin: 0 auto;
-  border: solid 7px var(--darkGrey);
+  border: solid 3px var(--white);
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -84,7 +79,7 @@ body {
 
 .pokemon-name,
 .search-area {
-    color: white;
+  color: white;
   text-align: center;
   margin-top: 0.875rem;
   font-size: 1.8rem;
@@ -99,11 +94,11 @@ body {
 }
 
 .poke-info label {
-    color:var(--white);
+    color:var(--darkGrey);
 }
 
 .poke-info span {
-    color: var(--yellow);
+    color: var(--white);
 
 }
 
@@ -143,6 +138,9 @@ body {
   height: auto;
   border-radius: 0 1rem 1rem 0;
   padding: 0.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--red);
 }
 
 .error-area {
@@ -163,5 +161,6 @@ body {
   .pokemon-area::before,
   .pokemon-area::after {
     width: 150px;
+    left: 47px;
   }
 }
