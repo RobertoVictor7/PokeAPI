@@ -141,6 +141,7 @@ body {
   color: var(--white);
   text-transform: uppercase;
   background-color: var(--red);
+  cursor: pointer;
 }
 
 .error-area {
