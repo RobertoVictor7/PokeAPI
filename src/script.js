@@ -10,37 +10,31 @@ function handleClick(e) {
   searchPokemon(formatPokemon);
 }
 
-function searchPokemon(pokemon) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-    .then((res) => res.json())
-    .then((data) => {
-      const pokemon = {
-        displayPokemon: document.querySelector(".pokemon-display img"),
-        displayName: document.querySelector(".pokemon-name"),
-        displayType: document.querySelector(".display-type"),
-        displayHeight: document.querySelector(".display-height"),
-        displayWeight: document.querySelector(".display-weight"),
-      };
+async function searchPokemon(pokemon) {
+  try {
+    const pokeApi = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const pokeData = await pokeApi.json();
 
-      pokemon.displayPokemon.src = data.sprites.front_default;
-      pokemon.displayName.innerText = data.name;
-      pokemon.displayHeight.innerText = data.height;
-      pokemon.displayWeight.innerText = data.weight;
+    const displayPokemon = document.querySelector(".pokemon-display img");
+    const displayName = document.querySelector(".pokemon-name");
+    const displayType = document.querySelector(".display-type");
+    const displayHeight = document.querySelector(".display-height");
+    const displayWeight = document.querySelector(".display-weight");
 
-      const type = data.types;
-      const pokemonTypes = type.map((type) => {
-        return (type = type.type.name);
-      });
+    displayPokemon.src = pokeData.sprites.front_default;
+    displayName.innerText = pokeData.name;
+    displayHeight.innerText = pokeData.height;
+    displayWeight.innerText = pokeData.weight;
 
-      pokemon.displayType.innerText = pokemonTypes;
-      displayError.innerText = '';
-    })
-    .catch((err) => {
-      
-      err.message = "Pokemon not found";
-      const error = err.message;
-      displayError.innerText = error;
+    const type = pokeData.types;
+    const pokemonTypes = type.map((type) => {
+      return (type = type.type.name);
     });
-}
 
+    displayType.innerText = pokemonTypes;
+    displayError.innerText = "";
+  } catch {
+    displayError.innerText = "Pokemon Not Found";
+  }
+}
 searchBtn.addEventListener("click", handleClick);
